@@ -20,7 +20,7 @@ use App\Http\Controllers\CategoryController;
 
 
 // Route::get('/home',[HomeController::class,'home'])->name('home');
-Route::get('/',[HomeController::class,'home']);
+Route::get('/',[HomeController::class,'home'])->name('home');
 
 //Category
 Route::get('/category',[CategoryController::class,'Category'])->name('category');
