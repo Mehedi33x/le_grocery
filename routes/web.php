@@ -1,9 +1,11 @@
 <?php
 
-use App\Http\Controllers\CategoryController;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\RoleController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,3 +28,7 @@ Route::get('/add_category',[CategoryController::class,'add_category'])->name('ad
 
 //Product
 Route::get('/product',[ProductController::class,'Product'])->name('product');
+
+//role
+Route::get('/Role_list',[RoleController::class,'Role_list'])->name('role.list');
+Route::get('/role_Create',[RoleController::class,'Role_Create'])->name('role.create');
