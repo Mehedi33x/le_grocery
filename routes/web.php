@@ -1,6 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\RoleController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +18,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+// Route::get('/home',[HomeController::class,'home'])->name('home');
+Route::get('/',[HomeController::class,'home'])->name('home');
+
+//Category
+Route::get('/category',[CategoryController::class,'Category'])->name('category');
+Route::get('/add_category',[CategoryController::class,'add_category'])->name('add.category');
+
+//Product
+Route::get('/product',[ProductController::class,'Product'])->name('product');
+
+//role
+Route::get('/Role_list',[RoleController::class,'Role_list'])->name('role.list');
+Route::get('/role_Create',[RoleController::class,'Role_Create'])->name('role.create');
