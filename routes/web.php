@@ -32,3 +32,4 @@ Route::get('/product',[ProductController::class,'Product'])->name('product');
 //role
 Route::get('/Role_list',[RoleController::class,'Role_list'])->name('role.list');
 Route::get('/role_Create',[RoleController::class,'Role_Create'])->name('role.create');
+ROute::post('/role_store',[RoleController::class,'Role.store'])->name('role.store');
