@@ -28,8 +28,14 @@ Route::get('/add_category',[CategoryController::class,'add_category'])->name('ad
 
 //Product
 Route::get('/product',[ProductController::class,'Product'])->name('product');
+Route::get('/add_product',[ProductController::class,'add_product'])->name('add.product');
+Route::post('/store_product',[ProductController::class,'product_store'])->name('product.store');
+Route::get('/product_edit/{id}',[ProductController::class,'edit_product'])->name('product.edit');
+Route::put('/product_update/{id}',[ProductController::class,'update_product'])->name('product.update');
+Route::get('/single_product_view/{id}',[ProductController::class,'single_view_product'])->name('view.product');
+Route::get('/single_product_delete/{id}',[ProductController::class,'single_product_delete'])->name('single.product.delete');
 
 //role
 Route::get('/Role_list',[RoleController::class,'Role_list'])->name('role.list');
 Route::get('/role_Create',[RoleController::class,'Role_Create'])->name('role.create');
-ROute::post('/role_store',[RoleController::class,'Role.store'])->name('role.store');
+Route::post('/role_store',[RoleController::class,'Role.store'])->name('role.store');
